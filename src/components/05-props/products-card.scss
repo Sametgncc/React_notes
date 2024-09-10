@@ -1,0 +1,21 @@
+.product-card{
+    background-color: aliceblue;
+    padding: 20px 30px;
+    border: 1px solid aliceblue;
+    border-radius: 10px;
+
+    h3{
+        color: blue;
+        font-size: 1.5rem;
+
+    }
+
+    h5{
+        color: black;
+        font-size: 1.2rem;
+        display: inline-block;
+        background-color: aquamarine;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+}
