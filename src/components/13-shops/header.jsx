@@ -3,18 +3,20 @@ import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
 
 const Header = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-danger bg-gradient">
       <Container fluid>
         <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className="me-auto my-2 my-lg-0"
+            className="mx-auto my-2 my-lg-0"
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
             <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
+            <Nav.Link href="#action2">Products</Nav.Link>
+            <Nav.Link href="#action2">About Us</Nav.Link>
+            <Nav.Link href="#action2">Contact Us</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -23,7 +25,7 @@ const Header = () => {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-light">Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
