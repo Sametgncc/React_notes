@@ -20,11 +20,13 @@
 // import ProfileCard from "./components/09-profil-card/profil-card";
 // import Gallery from "./components/08-image-gallery/gallery";
 // import {ReactBootstrap} from "./components/10-bootstrap/react-bootstrap";
-// import Icons from "./components/11-icons/icons";
-
-import Event1 from "./components/12-events/event1";
-import Event2 from "./components/12-events/event2";
+// import Icons from "./components/11-icons/icons"; 
+// import Event1 from "./components/12-events/event1";
+// import Event2 from "./components/12-events/event2";
 import Shop from "./components/13-shops/shop";
+import State from "./components/14-state/state";
+import Stateless from "./components/14-state/stateless";
+import Counter1 from "./components/counter/counter1";
 
 
 
@@ -66,12 +68,21 @@ const App = () => {
     <ReactBootstrap></ReactBootstrap>
     <Icons></Icons>
     <Event1></Event1>
-         <Event2></Event2>
-
-    }
-     */}
-    
+    <Event2></Event2>
     <Shop></Shop>
+    <Stateless></Stateless>  
+    <State></State>    
+    }
+     */}  
+
+     <Counter1></Counter1>
+     
+
+     
+
+
+    
+   
 
      
      
