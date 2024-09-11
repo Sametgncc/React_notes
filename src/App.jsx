@@ -27,6 +27,7 @@ import Shop from "./components/13-shops/shop";
 import State from "./components/14-state/state";
 import Stateless from "./components/14-state/stateless";
 import Counter1 from "./components/counter/counter1";
+import Counter2 from "./components/counter/counter2";
 
 
 
@@ -71,20 +72,12 @@ const App = () => {
     <Event2></Event2>
     <Shop></Shop>
     <Stateless></Stateless>  
-    <State></State>    
+    <State></State> 
+    <Counter1></Counter1>   
     }
      */}  
 
-     <Counter1></Counter1>
-     
-
-     
-
-
-    
-   
-
-     
+     <Counter2></Counter2>
      
     </div>
   );

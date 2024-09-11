@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Button, ButtonGroup, Container } from "react-bootstrap";
 import { TfiMinus, TfiPlus, TfiReload } from "react-icons/tfi";
 
-const Counter1 = () => {
+const Counter2
+ = () => {
 
   const [count, setCount] = useState(0);
 
@@ -29,4 +30,5 @@ const Counter1 = () => {
   );
 };
 
-export default Counter1;
+export default Counter2
+;
