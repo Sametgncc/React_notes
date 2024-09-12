@@ -30,6 +30,8 @@ import Counter1 from "./components/15-counter/counter1";
 import Counter2 from "./components/15-counter/counter2";
 import UserList from "./components/16-birthday/user-list";
 import UseEffect1 from "./components/17-useEffect/useEffect1";
+import UserEffect3 from "./components/17-useEffect/userEffect3";
+import Clock3 from "./components/18-clock3/clock3";
 
 
 
@@ -78,15 +80,15 @@ const App = () => {
     <Counter1></Counter1>  
 <Counter2></Counter2>
      <UserList></UserList>
+<UseEffect1></UseEffect1>
+     <Clock3></Clock3>
 
     }
      */} 
 
-     <UseEffect1></UseEffect1>
+     <UserEffect3></UserEffect3>
 
 
-     
-     
     </div>
   );
 };
