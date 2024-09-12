@@ -29,6 +29,7 @@ import Stateless from "./components/14-state/stateless";
 import Counter1 from "./components/15-counter/counter1";
 import Counter2 from "./components/15-counter/counter2";
 import UserList from "./components/16-birthday/user-list";
+import UseEffect1 from "./components/17-useEffect/useEffect1";
 
 
 
@@ -76,10 +77,13 @@ const App = () => {
     <State></State> 
     <Counter1></Counter1>  
 <Counter2></Counter2>
+     <UserList></UserList>
+
     }
      */} 
 
-     <UserList></UserList>
+     <UseEffect1></UseEffect1>
+
 
      
      
