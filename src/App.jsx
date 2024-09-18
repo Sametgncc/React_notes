@@ -32,6 +32,7 @@ import UserList from "./components/16-birthday/user-list";
 import UseEffect1 from "./components/17-useEffect/useEffect1";
 import UserEffect3 from "./components/17-useEffect/userEffect3";
 import Clock3 from "./components/18-clock3/clock3";
+import CountryFilter from "./components/19-country-filter/country-filter";
 
 
 
@@ -82,11 +83,12 @@ const App = () => {
      <UserList></UserList>
 <UseEffect1></UseEffect1>
      <Clock3></Clock3>
+    <UserEffect3></UserEffect3>
 
     }
      */} 
 
-     <UserEffect3></UserEffect3>
+     <CountryFilter></CountryFilter>
 
 
     </div>
