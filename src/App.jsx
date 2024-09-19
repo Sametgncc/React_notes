@@ -23,17 +23,18 @@
 // import Icons from "./components/11-icons/icons"; 
 // import Event1 from "./components/12-events/event1";
 // import Event2 from "./components/12-events/event2";
-import Shop from "./components/13-shops/shop";
-import State from "./components/14-state/state";
-import Stateless from "./components/14-state/stateless";
-import Counter1 from "./components/15-counter/counter1";
-import Counter2 from "./components/15-counter/counter2";
-import UserList from "./components/16-birthday/user-list";
-import UseEffect1 from "./components/17-useEffect/useEffect1";
-import UserEffect3 from "./components/17-useEffect/userEffect3";
-import Clock3 from "./components/18-clock3/clock3";
-import CountryFilter from "./components/19-country-filter/country-filter";
+// import Shop from "./components/13-shops/shop";
+// import State from "./components/14-state/state";
+// import Stateless from "./components/14-state/stateless";
+// import Counter1 from "./components/15-counter/counter1";
+// import Counter2 from "./components/15-counter/counter2";
+// import UserList from "./components/16-birthday/user-list";
+// import UseEffect1 from "./components/17-useEffect/useEffect1";
+// import UserEffect3 from "./components/17-useEffect/userEffect3";
+// import Clock3 from "./components/18-clock3/clock3";
+// import CountryFilter from "./components/19-country-filter/country-filter";
 import UseRef from "./components/20-useRef/useRef";
+import ClassComp from "./components/21-classTypeComponent/class-comp";
 
 
 
@@ -86,11 +87,13 @@ const App = () => {
      <Clock3></Clock3>
     <UserEffect3></UserEffect3>
      <CountryFilter></CountryFilter>
+     <UseRef></UseRef>
 
     }
      */} 
 
-     <UseRef></UseRef>
+     <ClassComp></ClassComp>
+
 
 
 
