@@ -33,8 +33,10 @@
 // import UserEffect3 from "./components/17-useEffect/userEffect3";
 // import Clock3 from "./components/18-clock3/clock3";
 // import CountryFilter from "./components/19-country-filter/country-filter";
-import UseRef from "./components/20-useRef/useRef";
-import ClassComp from "./components/21-classTypeComponent/class-comp";
+// import UseRef from "./components/20-useRef/useRef";
+// import ClassComp from "./components/21-classTypeComponent/class-comp";
+// import ProductStore from "./components/21-products-store/product-store";
+import Recipes from "./components/22-recipes/recipes";
 
 
 
@@ -88,11 +90,14 @@ const App = () => {
     <UserEffect3></UserEffect3>
      <CountryFilter></CountryFilter>
      <UseRef></UseRef>
-
+     <ClassComp></ClassComp>
+ <ProductStore></ProductStore>
     }
      */} 
+    
+    <Recipes></Recipes>
 
-     <ClassComp></ClassComp>
+
 
 
 
