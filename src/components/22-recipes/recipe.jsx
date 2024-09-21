@@ -4,9 +4,11 @@ import { LuChefHat } from "react-icons/lu";
 import { FaRegStar, FaStar } from "react-icons/fa6";
 
 const Recipe = (props) => {
-  const { name, image, cuisine, rating } = props;
+  const { name, image, cuisine, rating } = props;    
 
   const score = (Math.round(rating));
+
+  
 
   const starsFull = [...new Array(score)].map((_,index) => (<FaStar key={index} />));
   const starsEmpty = [...new Array(5 - score)].map((_,index) => ( <FaRegStar key={index}/>

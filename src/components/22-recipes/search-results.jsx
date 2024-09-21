@@ -8,6 +8,8 @@ import Recipe from "./recipe";
 const SearchResults = ({ searchText }) => {
   const [recipes, setRecipes] = useState([]);
 
+
+  //! Debouncing 
   useEffect(() => {
     const loadData = async () => {
       const res = await axios(
@@ -20,9 +22,13 @@ const SearchResults = ({ searchText }) => {
 
     };
 
-    setTimeout(() => {
+    const debounce = setTimeout(() => {
       loadData();
-    }, 500);
+    })
+
+    // ! Buradaki return ilk render  da calismaz 
+    // ! Ne zamman ki searchText state degeri degisir o zman calisir 
+   return () => clearTimeout(debounce);
 
   }, [searchText]);
 

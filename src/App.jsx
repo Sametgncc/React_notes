@@ -37,6 +37,7 @@
 // import ClassComp from "./components/21-classTypeComponent/class-comp";
 // import ProductStore from "./components/21-products-store/product-store";
 import Recipes from "./components/22-recipes/recipes";
+import Parent from "./components/24-child-to-parent/parent";
 
 
 
@@ -92,10 +93,11 @@ const App = () => {
      <UseRef></UseRef>
      <ClassComp></ClassComp>
  <ProductStore></ProductStore>
+ <Recipes></Recipes>
     }
      */} 
     
-    <Recipes></Recipes>
+    <Parent/>
 
 
 
