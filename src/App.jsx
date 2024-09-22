@@ -38,6 +38,8 @@
 // import ProductStore from "./components/21-products-store/product-store";
 import Recipes from "./components/22-recipes/recipes";
 import Parent from "./components/24-child-to-parent/parent";
+import Form1 from "./components/25-forms/form1";
+import Form2 from "./components/25-forms/form2";
 
 
 
@@ -84,20 +86,22 @@ const App = () => {
     <Stateless></Stateless>  
     <State></State> 
     <Counter1></Counter1>  
-<Counter2></Counter2>
+    <Counter2></Counter2>
      <UserList></UserList>
-<UseEffect1></UseEffect1>
+    <UseEffect1></UseEffect1>
      <Clock3></Clock3>
-    <UserEffect3></UserEffect3>
+     <UserEffect3></UserEffect3>
      <CountryFilter></CountryFilter>
      <UseRef></UseRef>
      <ClassComp></ClassComp>
- <ProductStore></ProductStore>
- <Recipes></Recipes>
+    <ProductStore></ProductStore>
+    <Recipes></Recipes>
+    <Parent/>
     }
+    <Form1/>
      */} 
     
-    <Parent/>
+    <Form2/>
 
 
 
