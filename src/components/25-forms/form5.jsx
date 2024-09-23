@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 
-const Form2 = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [phoneNumber, setPhoeneNumber] = useState("");
-  const [email, setEmail] = useState("");
-  const [address, setAddress] = useState("");
+const Form5 = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
+    email: "",
+    address: "",
+  });
 
+  console.log(formData);
   const handleSubmit = (e) => {
     // 1- Formun default davranısını engeller
     e.preventDefault();
@@ -29,10 +32,13 @@ const Form2 = () => {
     };
 
     // 4- Apiye istek atılır
-    alert("form submitted successfully" );
-
-
+    alert("form submitted successfully");
   };
+
+  const handleChange = (e) => {
+    const {name , value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));  
+  }
 
   return (
     <Container className="mt-3">
@@ -41,8 +47,9 @@ const Form2 = () => {
           <Form.Label>First Name</Form.Label>
           <Form.Control
             type="text"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
+            value={formData.firstName}
+            onChange={handleChange}
+            
           />
         </Form.Group>
 
@@ -50,8 +57,9 @@ const Form2 = () => {
           <Form.Label>Last Name</Form.Label>
           <Form.Control
             type="text"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
+            value={formData.lastName}
+            onChange={handleChange}
+
           />
         </Form.Group>
 
@@ -59,8 +67,9 @@ const Form2 = () => {
           <Form.Label>Phone Number</Form.Label>
           <Form.Control
             type="text"
-            value={phoneNumber}
-            onChange={(e) => setPhoeneNumber(e.target.value)}
+            value={formData.phoneNumber}
+            onChange={handleChange}
+
           />
         </Form.Group>
 
@@ -68,8 +77,9 @@ const Form2 = () => {
           <Form.Label>Email</Form.Label>
           <Form.Control
             type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={formData.email}
+            onChange={handleChange}
+
           />
         </Form.Group>
 
@@ -77,8 +87,9 @@ const Form2 = () => {
           <Form.Label>Addrass</Form.Label>
           <Form.Control
             type="text"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
+            value={formData.address}
+            onChange={handleChange}
+
             as="textarea"
             rows={3}
           />
@@ -92,4 +103,4 @@ const Form2 = () => {
   );
 };
 
-export default Form2;
+export default Form5;

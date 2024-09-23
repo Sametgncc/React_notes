@@ -40,6 +40,8 @@ import Recipes from "./components/22-recipes/recipes";
 import Parent from "./components/24-child-to-parent/parent";
 import Form1 from "./components/25-forms/form1";
 import Form2 from "./components/25-forms/form2";
+import Form3 from "./components/25-forms/form3";
+import Form4 from "./components/25-forms/form4";
 
 
 
@@ -99,12 +101,12 @@ const App = () => {
     <Parent/>
     }
     <Form1/>
-     */} 
-    
     <Form2/>
+    <Form3/>
+     */} 
 
-
-
+     <Form4/>
+     
 
 
 
