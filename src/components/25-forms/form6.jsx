@@ -14,35 +14,36 @@ const Form6 = () => {
     firstName: Yup.string()
       .min(3, "Too short")
       .max(15, "Too long")
-      .required("Requierd") ,
+      .required("Requierd"),
 
-	lastName: Yup.string()
-	  .min(3, "Too short")
-	  .max(15, "Too long")
-	  .required("Requierd") ,
+    lastName: Yup.string()
+      .min(3, "Too short")
+      .max(15, "Too long")
+      .required("Requierd"),
 
-	email: Yup.string()
-	  .email("Invalid email")
-	  .required("Requierd") ,
+    email: Yup.string().email("Invalid email").required("Requierd"),
   });
 
-  const ouSubmit = (values) => {
-
-  };
-
+  const ouSubmit = (values) => {};
 
   const formik = useFormik({
     initialValues: initalValues,
     validationSchema: validationSchema,
-    onSubmit: ouSubmit, 
+    onSubmit: ouSubmit,
   });
 
   return (
     <Container className="mt-3">
-      <Form>
+      <Form noValidate onSubmit={formik.handleSubmit}>
         <Form.Group className="mb-3" controlId="firstName">
           <Form.Label>First Name</Form.Label>
-          <Form.Control name="firstName" type="text" />
+          <Form.Control
+            name="firstName"
+            type="text"
+            value={formik.values.firstName}
+            onChange={formik.handleChange}
+            isInvalid = {!!formik.errors.firstName}
+          />
           <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
         </Form.Group>
 
