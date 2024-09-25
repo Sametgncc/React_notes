@@ -1,106 +1,150 @@
 import React, { useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 
-const Form5 = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    phoneNumber: "",
-    email: "",
-    address: "",
-  });
+ const Form5 = () => {
+	const [formData, setFormData] = useState({
+		firstName: "",
+		lastName: "",
+		phoneNumber: "",
+		email: "",
+		address: "",
+	});
 
-  console.log(formData);
-  const handleSubmit = (e) => {
-    // 1- Formun default davranısını engeller
-    e.preventDefault();
+	const [errors, setErrors] = useState({});
 
-    // 2- form valitation islemi yapabilir
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setFormData((prev) => ({ ...prev, [name]: value }));
+	};
 
-    if (!firstName || !lastName || !phoneNumber || !email || !address) {
-      alert("Please fill out all fields");
-      return;
-    }
+	const handleSubmit = (e) => {
+		// 1- Formun default submit davranisi iptal edilir
+		e.preventDefault();
 
-    // 3- Api ye gonderilacak paylod olusturulur
-    const payload = {
-      firstName,
-      lastName,
-      phoneNumber,
-      email,
-      address,
-    };
+		
 
-    // 4- Apiye istek atılır
-    alert("form submitted successfully");
-  };
+		// 2- Form validation islemi yapilir
+		let tmpErrors = {};
+		
+		if (!formData.firstName) {
+			tmpErrors = { ...tmpErrors, firstName: "First Name is required" };
+		}
+		if (!formData.lastName) {
+			tmpErrors = { ...tmpErrors, lastName: "Last Name is required" };
+		}
+		if (!formData.email) {
+			tmpErrors = { ...tmpErrors, email: "Email is required" };
+		} else {
+			const emailRegex = /[a-zA-Z0-9._-]{3,}@[a-zA-Z0-9._-]+\.[a-zA-Z]+/;
+			if (!emailRegex.test(formData.email)) {
+				tmpErrors = { ...tmpErrors, email: "Email is invalid" };
+			}
+		}
 
-  const handleChange = (e) => {
-    const {name , value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));  
-  }
+		if (!formData.address) {
+			tmpErrors = { ...tmpErrors, address: "Address is required" };
+		}
 
-  return (
-    <Container className="mt-3">
-      <Form>
-        <Form.Group className="mb-3" controlId="firstName">
-          <Form.Label>First Name</Form.Label>
-          <Form.Control
-            type="text"
-            value={formData.firstName}
-            onChange={handleChange}
-            
-          />
-        </Form.Group>
+		if (Object.keys(tmpErrors).length > 0) {
+			setErrors({ ...tmpErrors });
+			return;
+		}
 
-        <Form.Group className="mb-3" controlId="lastName">
-          <Form.Label>Last Name</Form.Label>
-          <Form.Control
-            type="text"
-            value={formData.lastName}
-            onChange={handleChange}
+		
 
-          />
-        </Form.Group>
+		// 3- API a gonderilecek payload olusturulur
+		const payload = {
+			firstName,
+			lastName,
+			phoneNumber,
+			email,
+			address,
+		};
 
-        <Form.Group className="mb-3" controlId="phoneNumber">
-          <Form.Label>Phone Number</Form.Label>
-          <Form.Control
-            type="text"
-            value={formData.phoneNumber}
-            onChange={handleChange}
+		// 4- API a gonderilir
 
-          />
-        </Form.Group>
+		setErrors({});
+		alert("Form submitted successfully");
+	};
 
-        <Form.Group className="mb-3" controlId="email">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            type="text"
-            value={formData.email}
-            onChange={handleChange}
+	return (
+		<Container className="mt-3">
+			<Form onSubmit={handleSubmit}>
+				<Form.Group className="mb-3" controlId="firstName">
+					<Form.Label>First Name</Form.Label>
+					<Form.Control
+						name="firstName"
+						type="text"
+						value={formData.firstName}
+						onChange={handleChange}
+						isInvalid={!!errors.firstName}
+					/>
+					<Form.Control.Feedback type="invalid">
+						{errors.firstName}
+					</Form.Control.Feedback>
+				</Form.Group>
 
-          />
-        </Form.Group>
+				<Form.Group className="mb-3" controlId="lastName">
+					<Form.Label>Last Name</Form.Label>
+					<Form.Control
+						name="lastName"
+						type="text"
+						value={formData.lastName}
+						onChange={handleChange}
+						isInvalid={!!errors.lastName}
+					/>
+					<Form.Control.Feedback type="invalid">
+						{errors.lastName}
+					</Form.Control.Feedback>
+				</Form.Group>
 
-        <Form.Group className="mb-3" controlId="address">
-          <Form.Label>Addrass</Form.Label>
-          <Form.Control
-            type="text"
-            value={formData.address}
-            onChange={handleChange}
+				<Form.Group className="mb-3" controlId="phoneNumber">
+					<Form.Label>Phone Number</Form.Label>
+					<Form.Control
+						name="phoneNumber"
+						type="text"
+						value={formData.phoneNumber}
+						onChange={handleChange}
+					/>
 
-            as="textarea"
-            rows={3}
-          />
-        </Form.Group>
+				</Form.Group>
 
-        <Button variant="primary" type="submit">
-          Send
-        </Button>
-      </Form>
-    </Container>
-  );
+				<Form.Group className="mb-3" controlId="email">
+					<Form.Label>Email</Form.Label>
+					<Form.Control
+						name="email"
+						type="text"
+						value={formData.email}
+						onChange={handleChange}
+						isInvalid={!!errors.email}
+					/>
+					<Form.Control.Feedback type="invalid">
+						{errors.email}
+					</Form.Control.Feedback>
+				</Form.Group>
+
+				<Form.Group className="mb-3" controlId="address">
+					<Form.Label>Address</Form.Label>
+					<Form.Control
+						name="address"
+						type="text"
+						as="textarea"
+						rows={3}
+						value={formData.address}
+						onChange={handleChange}
+						isInvalid={!!errors.address}
+					/>
+					<Form.Control.Feedback type="invalid">
+						{errors.address}
+					</Form.Control.Feedback>
+				</Form.Group>
+
+				<Button variant="primary" type="submit">
+					Send
+				</Button>
+			</Form>
+		</Container>
+	);
 };
 
 export default Form5;

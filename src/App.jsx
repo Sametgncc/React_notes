@@ -42,6 +42,8 @@ import Form1 from "./components/25-forms/form1";
 import Form2 from "./components/25-forms/form2";
 import Form3 from "./components/25-forms/form3";
 import Form4 from "./components/25-forms/form4";
+import Form5 from "./components/25-forms/form5";
+import Form6 from "./components/25-forms/form6";
 
 
 
@@ -103,9 +105,13 @@ const App = () => {
     <Form1/>
     <Form2/>
     <Form3/>
-     */} 
+    <Form4/>
+    <Form5/>
+     */}
 
-     <Form4/>
+     <Form6/> 
+    
+
      
 
 
