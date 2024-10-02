@@ -25,6 +25,7 @@ const MainMenu = () => {
     { path: "/style/5", label: "STYLE5" },
     { path: "/customers", label: "Customers" },
     { path: "/useNavigate", label: "UseNavigate" },
+    { path: "/converter", label: "Converter" },
     
     
   ];
@@ -51,6 +52,11 @@ const MainMenu = () => {
 };
 
 export default MainMenu;
+
+
+//! usteki yapi ile ayni
+
+
 
 // import React from "react";
 // import { Card, Nav } from "react-bootstrap";

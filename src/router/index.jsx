@@ -18,6 +18,9 @@ import Home from "../components/00-common/home";
 import Customers from "../components/26-routing/customer";
 import CustomerDetalis from "../components/26-routing/customer-detalis";
 import UseNavigate from "../components/26-routing/use-navigate";
+import Converter from "../components/27-currencies/converter";
+
+
 
 const router = createBrowserRouter([
   {
@@ -123,9 +126,14 @@ const router = createBrowserRouter([
       element: <UseNavigate/>
 
     },
+    {
+      path: "converter",
+      element : <Converter/>
+    },
     ],
   },
 ]);
+
 
 export const AppRouter = () => {
   return <RouterProvider router={router} />;
